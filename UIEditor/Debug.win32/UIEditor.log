@@ -1,0 +1,26 @@
+﻿生成启动时间为 2014/6/8 13:07:48。
+     1>项目“E:\Desktop\MySpace\UIEditor\UIEditor\UIEditor.vcxproj”在节点 2 上(Build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug.win32\UIEditor.unsuccessfulbuild”执行 Touch 任务。
+       CustomBuild:
+         所有输出均为最新。
+       ClCompile:
+         所有输出均为最新。
+         所有输出均为最新。
+       ResourceCompile:
+         所有输出均为最新。
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Desktop\MySpace\UIEditor\Debug.win32\\UIEditor.exe" /NOLOGO /LIBPATH:D:\Qt\Qt5.3.0\5.3\msvc2012_opengl\lib /LIBPATH:E:\Desktop\MySpace\UIEditor\Debug.win32\ qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5Widgetsd.lib libcocos2d.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Desktop\MySpace\UIEditor\Debug.win32\UIEditor.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Desktop\MySpace\UIEditor\Debug.win32\UIEditor.lib" /MACHINE:X86 /SAFESEH Debug.win32\UIEditor.res
+         Debug.win32\moc_uieditor.obj
+         Debug.win32\qrc_uieditor.obj
+         Debug.win32\main.obj
+         Debug.win32\uieditor.obj
+         UIEditor.vcxproj -> E:\Desktop\MySpace\UIEditor\Debug.win32\UIEditor.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug.win32\UIEditor.unsuccessfulbuild”。
+         正在对“Debug.win32\UIEditor.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\Desktop\MySpace\UIEditor\UIEditor\UIEditor.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.24
