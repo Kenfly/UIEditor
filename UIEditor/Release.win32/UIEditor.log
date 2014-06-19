@@ -1,12 +1,13 @@
-﻿生成启动时间为 2014/6/8 13:07:56。
+﻿生成启动时间为 2014/6/9 0:03:31。
      1>项目“E:\Desktop\MySpace\UIEditor\UIEditor\UIEditor.vcxproj”在节点 2 上(Build 个目标)。
      1>InitializeBuildStatus:
-         正在对“Release.win32\UIEditor.unsuccessfulbuild”执行 Touch 任务。
+         正在创建“Release.win32\UIEditor.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        CustomBuild:
          所有输出均为最新。
        ClCompile:
          所有输出均为最新。
-         所有输出均为最新。
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\Qt5.3.0\5.3\msvc2012_opengl\include /I.\GeneratedFiles\Release /ID:\Qt\Qt5.3.0\5.3\msvc2012_opengl\include\QtCore /ID:\Qt\Qt5.3.0\5.3\msvc2012_opengl\include\QtGui /ID:\Qt\Qt5.3.0\5.3\msvc2012_opengl\include\QtOpenGL /ID:\Qt\Qt5.3.0\5.3\msvc2012_opengl\include\QtWidgets /IE:\Desktop\MySpace\UIEditor\cocos2dx /IE:\Desktop\MySpace\UIEditor\cocos2dx\include /IE:\Desktop\MySpace\UIEditor\cocos2dx\kazmath\include /IE:\Desktop\MySpace\UIEditor\cocos2dx\platform /IE:\Desktop\MySpace\UIEditor\cocos2dx\platform\win32 /IE:\Desktop\MySpace\UIEditor\cocos2dx\platform\third_party\win32 /IE:\Desktop\MySpace\UIEditor\cocos2dx\platform\third_party\win32\OGLES /IE:\Desktop\MySpace\UIEditor\cocos2dx\platform\third_party\win32\pthread /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /D _WINDOWS /D STRICT /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release.win32\\" /Fd"Release.win32\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
        ResourceCompile:
          所有输出均为最新。
        Link:
@@ -23,4 +24,4 @@
 
 生成成功。
 
-已用时间 00:00:00.58
+已用时间 00:00:04.96

@@ -1,10 +1,13 @@
-#include "uieditor.h"
 #include <QtWidgets/QApplication>
-#include "cocos2d.h"
+#include "View/UIEditor.h"
+
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	UIEditor w;
-	w.show();
+
+
+	UIEditor* pWindow = new UIEditor();
+	pWindow->show();
+
 	return a.exec();
 }

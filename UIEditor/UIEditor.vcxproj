@@ -78,7 +78,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GeneratedFiles\Debug\moc_uieditor.cpp">
+    <ClCompile Include="GeneratedFiles\Debug\moc_Cocos2dxWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_UIEditor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\qrc_uieditor.cpp">
@@ -87,23 +90,18 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\Release\moc_uieditor.cpp">
+    <ClCompile Include="GeneratedFiles\Release\moc_Cocos2dxWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_UIEditor.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="uieditor.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="uieditor.h">
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing uieditor.h...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -D_WINDOWS -DSTRICT -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS_DEBUG -DCOCOS2D_DEBUG=1  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)cocos2dx" "-I$(SolutionDir)cocos2dx\include" "-I$(SolutionDir)cocos2dx\kazmath\include" "-I$(SolutionDir)cocos2dx\platform" "-I$(SolutionDir)cocos2dx\platform\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\pthread"</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing uieditor.h...</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -D_WINDOWS -DSTRICT  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)cocos2dx" "-I$(SolutionDir)cocos2dx\include" "-I$(SolutionDir)cocos2dx\kazmath\include" "-I$(SolutionDir)cocos2dx\platform" "-I$(SolutionDir)cocos2dx\platform\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\pthread"</Command>
-    </CustomBuild>
+    <ClCompile Include="View\AppDelegate.cpp" />
+    <ClCompile Include="View\Cocos2dxWidget.cpp" />
+    <ClCompile Include="View\HelloWorldScene.cpp" />
+    <ClCompile Include="View\MainScene.cpp" />
+    <ClCompile Include="View\UIEditor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="uieditor.ui">
@@ -119,6 +117,30 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_uieditor.h" />
+    <ClInclude Include="View\AppDelegate.h" />
+    <ClInclude Include="View\AppMacros.h" />
+    <ClInclude Include="View\HelloWorldScene.h" />
+    <ClInclude Include="View\MainScene.h" />
+    <CustomBuild Include="View\UIEditor.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing UIEditor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -D_WINDOWS -DSTRICT -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS_DEBUG -DCOCOS2D_DEBUG=1 "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)cocos2dx" "-I$(SolutionDir)cocos2dx\include" "-I$(SolutionDir)cocos2dx\kazmath\include" "-I$(SolutionDir)cocos2dx\platform" "-I$(SolutionDir)cocos2dx\platform\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\pthread"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing UIEditor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -D_WINDOWS -DSTRICT "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)cocos2dx" "-I$(SolutionDir)cocos2dx\include" "-I$(SolutionDir)cocos2dx\kazmath\include" "-I$(SolutionDir)cocos2dx\platform" "-I$(SolutionDir)cocos2dx\platform\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\pthread"</Command>
+    </CustomBuild>
+    <CustomBuild Include="View\Cocos2dxWidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Cocos2dxWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -D_WINDOWS -DSTRICT -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS_DEBUG -DCOCOS2D_DEBUG=1 "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)cocos2dx" "-I$(SolutionDir)cocos2dx\include" "-I$(SolutionDir)cocos2dx\kazmath\include" "-I$(SolutionDir)cocos2dx\platform" "-I$(SolutionDir)cocos2dx\platform\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\pthread"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Cocos2dxWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -D_WINDOWS -DSTRICT "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtWidgets" "-I$(SolutionDir)cocos2dx" "-I$(SolutionDir)cocos2dx\include" "-I$(SolutionDir)cocos2dx\kazmath\include" "-I$(SolutionDir)cocos2dx\platform" "-I$(SolutionDir)cocos2dx\platform\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\OGLES" "-I$(SolutionDir)cocos2dx\platform\third_party\win32\pthread"</Command>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="uieditor.qrc">

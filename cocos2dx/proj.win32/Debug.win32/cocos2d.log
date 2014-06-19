@@ -1,152 +1,11 @@
-﻿生成启动时间为 2014/6/8 12:54:19。
+﻿生成启动时间为 2014/6/19 23:40:07。
      1>项目“E:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\cocos2d.vcxproj”在节点 2 上(Build 个目标)。
-     1>PrepareForBuild:
-         正在创建目录“E:\Desktop\MySpace\UIEditor\Debug.win32\”。
-       InitializeBuildStatus:
+     1>InitializeBuildStatus:
          正在创建“Debug.win32\libcocos2d.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\.. /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\win32 /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\iconv /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\zlib /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libpng /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libjpeg /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libtiff /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libwebp /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\pthread /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\OGLES /I..\include /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\kazmath\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COCOS2DXWIN32_EXPORTS /D GL_GLEXT_PROTOTYPES /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\base_nodes\CCAtlasNode.cpp ..\base_nodes\CCNode.cpp ..\cocoa\CCAffineTransform.cpp ..\cocoa\CCArray.cpp ..\cocoa\CCAutoreleasePool.cpp ..\cocoa\CCDataVisitor.cpp ..\cocoa\CCDictionary.cpp ..\cocoa\CCGeometry.cpp ..\cocoa\CCNS.cpp ..\cocoa\CCObject.cpp ..\cocoa\CCSet.cpp ..\cocoa\CCString.cpp ..\cocoa\CCZone.cpp ..\draw_nodes\CCDrawingPrimitives.cpp ..\draw_nodes\CCDrawNode.cpp ..\effects\CCGrabber.cpp ..\effects\CCGrid.cpp ..\actions\CCAction.cpp ..\actions\CCActionCamera.cpp ..\actions\CCActionCatmullRom.cpp ..\actions\CCActionEase.cpp ..\actions\CCActionGrid.cpp ..\actions\CCActionGrid3D.cpp ..\actions\CCActionInstant.cpp ..\actions\CCActionInterval.cpp ..\actions\CCActionManager.cpp ..\actions\CCActionPageTurn3D.cpp ..\actions\CCActionProgressTimer.cpp ..\actions\CCActionTiledGrid.cpp ..\actions\CCActionTween.cpp ..\label_nodes\CCLabelAtlas.cpp ..\label_nodes\CCLabelBMFont.cpp ..\label_nodes\CCLabelTTF.cpp ..\layers_scenes_transitions_nodes\CCLayer.cpp ..\layers_scenes_transitions_nodes\CCScene.cpp ..\layers_scenes_transitions_nodes\CCTransition.cpp ..\layers_scenes_transitions_nodes\CCTransitionPageTurn.cpp ..\layers_scenes_transitions_nodes\CCTransitionProgress.cpp ..\menu_nodes\CCMenu.cpp ..\menu_nodes\CCMenuItem.cpp ..\misc_nodes\CCClippingNode.cpp ..\misc_nodes\CCMotionStreak.cpp ..\misc_nodes\CCProgressTimer.cpp ..\misc_nodes\CCRenderTexture.cpp ..\particle_nodes\CCParticleBatchNode.cpp ..\particle_nodes\CCParticleExamples.cpp ..\particle_nodes\CCParticleSystem.cpp ..\particle_nodes\CCParticleSystemQuad.cpp ..\platform\CCEGLViewProtocol.cpp ..\platform\CCFileUtils.cpp ..\platform\CCImageCommonWebp.cpp ..\platform\CCSAXParser.cpp ..\platform\CCThread.cpp ..\platform\platform.cpp ..\platform\win32\CCAccelerometer.cpp ..\platform\win32\CCApplication.cpp ..\platform\win32\CCCommon.cpp ..\platform\win32\CCDevice.cpp ..\platform\win32\CCEGLView.cpp ..\platform\win32\CCFileUtilsWin32.cpp ..\platform\win32\CCImage.cpp ..\platform\win32\CCStdC.cpp ..\shaders\CCGLProgram.cpp ..\shaders\ccGLStateCache.cpp ..\shaders\CCShaderCache.cpp ..\shaders\ccShaders.cpp ..\sprite_nodes\CCAnimation.cpp ..\sprite_nodes\CCAnimationCache.cpp ..\sprite_nodes\CCSprite.cpp ..\sprite_nodes\CCSpriteBatchNode.cpp ..\sprite_nodes\CCSpriteFrame.cpp ..\sprite_nodes\CCSpriteFrameCache.cpp ..\support\base64.cpp ..\support\CCNotificationCenter.cpp ..\support\CCPointExtension.cpp ..\support\CCProfiling.cpp ..\support\ccUTF8.cpp ..\support\ccUtils.cpp ..\support\CCVertex.cpp ..\support\component\CCComponent.cpp ..\support\component\CCComponentContainer.cpp ..\support\tinyxml2\tinyxml2.cpp ..\support\TransformUtils.cpp ..\support\data_support\ccCArray.cpp ..\support\image_support\TGAlib.cpp ..\support\user_default\CCUserDefault.cpp ..\support\zip_support\ioapi.cpp ..\support\zip_support\unzip.cpp ..\support\zip_support\ZipUtils.cpp ..\textures\CCTexture2D.cpp ..\textures\CCTextureAtlas.cpp ..\textures\CCTextureCache.cpp ..\textures\CCTextureETC.cpp ..\textures\CCTexturePVR.cpp ..\tileMap_parallax_nodes\CCParallaxNode.cpp ..\tileMap_parallax_nodes\CCTileMapAtlas.cpp ..\tileMap_parallax_nodes\CCTMXLayer.cpp ..\tileMap_parallax_nodes\CCTMXObjectGroup.cpp ..\tileMap_parallax_nodes\CCTMXTiledMap.cpp ..\tileMap_parallax_nodes\CCTMXXMLParser.cpp ..\touch_dispatcher\CCTouch.cpp ..\touch_dispatcher\CCTouchDispatcher.cpp ..\touch_dispatcher\CCTouchHandler.cpp ..\keypad_dispatcher\CCKeypadDelegate.cpp ..\keypad_dispatcher\CCKeypadDispatcher.cpp ..\text_input_node\CCIMEDispatcher.cpp ..\text_input_node\CCTextFieldTTF.cpp ..\script_support\CCScriptSupport.cpp ..\CCCamera.cpp ..\CCConfiguration.cpp ..\CCDirector.cpp ..\CCScheduler.cpp ..\cocos2d.cpp
-         cocos2d.cpp
-         CCScheduler.cpp
-         CCDirector.cpp
-         CCConfiguration.cpp
-         CCCamera.cpp
-         CCScriptSupport.cpp
-         CCTextFieldTTF.cpp
-         CCIMEDispatcher.cpp
-         CCKeypadDispatcher.cpp
-         CCKeypadDelegate.cpp
-         CCTouchHandler.cpp
-         CCTouchDispatcher.cpp
-         CCTouch.cpp
-         CCTMXXMLParser.cpp
-         CCTMXTiledMap.cpp
-         CCTMXObjectGroup.cpp
-         CCTMXLayer.cpp
-         CCTileMapAtlas.cpp
-         CCParallaxNode.cpp
-         CCTexturePVR.cpp
-         正在生成代码...
-         正在编译...
-         CCTextureETC.cpp
-         CCTextureCache.cpp
-         CCTextureAtlas.cpp
-         CCTexture2D.cpp
-         ZipUtils.cpp
-         unzip.cpp
-         ioapi.cpp
-         CCUserDefault.cpp
-         TGAlib.cpp
-         ccCArray.cpp
-         TransformUtils.cpp
-         tinyxml2.cpp
-         CCComponentContainer.cpp
-         CCComponent.cpp
-         CCVertex.cpp
-         ccUtils.cpp
-         ccUTF8.cpp
-         CCProfiling.cpp
-         CCPointExtension.cpp
-         CCNotificationCenter.cpp
-         正在生成代码...
-         正在编译...
-         base64.cpp
-         CCSpriteFrameCache.cpp
-         CCSpriteFrame.cpp
-         CCSpriteBatchNode.cpp
-         CCSprite.cpp
-         CCAnimationCache.cpp
-         CCAnimation.cpp
-         ccShaders.cpp
-         CCShaderCache.cpp
-         ccGLStateCache.cpp
-         CCGLProgram.cpp
-         CCStdC.cpp
-         CCImage.cpp
-         CCFileUtilsWin32.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\.. /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\win32 /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\iconv /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\zlib /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libpng /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libjpeg /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libtiff /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libwebp /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\pthread /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\OGLES /I..\include /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\kazmath\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COCOS2DXWIN32_EXPORTS /D GL_GLEXT_PROTOTYPES /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\platform\win32\CCEGLView.cpp
          CCEGLView.cpp
-         CCDevice.cpp
-         CCCommon.cpp
-         CCApplication.cpp
-         CCAccelerometer.cpp
-         platform.cpp
-         正在生成代码...
-         正在编译...
-         CCThread.cpp
-         CCSAXParser.cpp
-         CCImageCommonWebp.cpp
-         CCFileUtils.cpp
-         CCEGLViewProtocol.cpp
-         CCParticleSystemQuad.cpp
-         CCParticleSystem.cpp
-         CCParticleExamples.cpp
-         CCParticleBatchNode.cpp
-         CCRenderTexture.cpp
-         CCProgressTimer.cpp
-         CCMotionStreak.cpp
-         CCClippingNode.cpp
-         CCMenuItem.cpp
-         CCMenu.cpp
-         CCTransitionProgress.cpp
-         CCTransitionPageTurn.cpp
-         CCTransition.cpp
-         CCScene.cpp
-         CCLayer.cpp
-         正在生成代码...
-         正在编译...
-         CCLabelTTF.cpp
-         CCLabelBMFont.cpp
-         CCLabelAtlas.cpp
-         CCActionTween.cpp
-         CCActionTiledGrid.cpp
-         CCActionProgressTimer.cpp
-         CCActionPageTurn3D.cpp
-         CCActionManager.cpp
-         CCActionInterval.cpp
-         CCActionInstant.cpp
-         CCActionGrid3D.cpp
-         CCActionGrid.cpp
-         CCActionEase.cpp
-         CCActionCatmullRom.cpp
-         CCActionCamera.cpp
-         CCAction.cpp
-         CCGrid.cpp
-         CCGrabber.cpp
-         CCDrawNode.cpp
-         CCDrawingPrimitives.cpp
-         正在生成代码...
-         正在编译...
-         CCZone.cpp
-         CCString.cpp
-         CCSet.cpp
-         CCObject.cpp
-         CCNS.cpp
-         CCGeometry.cpp
-         CCDictionary.cpp
-         CCDataVisitor.cpp
-         CCAutoreleasePool.cpp
-         CCArray.cpp
-         CCAffineTransform.cpp
-         CCNode.cpp
-         CCAtlasNode.cpp
-         正在生成代码...
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\.. /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\win32 /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\iconv /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\zlib /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libpng /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libjpeg /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libtiff /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libwebp /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\pthread /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\OGLES /I..\include /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\kazmath\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COCOS2DXWIN32_EXPORTS /D GL_GLEXT_PROTOTYPES /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TC /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\ccFPSImages.c ..\kazmath\src\aabb.c ..\kazmath\src\mat3.c ..\kazmath\src\mat4.c ..\kazmath\src\neon_matrix_impl.c ..\kazmath\src\plane.c ..\kazmath\src\quaternion.c ..\kazmath\src\ray2.c ..\kazmath\src\utility.c ..\kazmath\src\vec2.c ..\kazmath\src\vec3.c ..\kazmath\src\vec4.c ..\kazmath\src\GL\mat4stack.c ..\kazmath\src\GL\matrix.c
-         matrix.c
-         mat4stack.c
-         vec4.c
-         vec3.c
-         vec2.c
-         utility.c
-         ray2.c
-         quaternion.c
-         plane.c
-     1>e:\desktop\myspace\uieditor\cocos2dx\kazmath\src\plane.c : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-         neon_matrix_impl.c
-         mat4.c
-         mat3.c
-         aabb.c
-         ccFPSImages.c
-         正在生成代码...
+         所有输出均为最新。
        PreLinkEvent:
          if not exist "E:\Desktop\MySpace\UIEditor\Debug.win32\" mkdir "E:\Desktop\MySpace\UIEditor\Debug.win32\"
          xcopy /Y /Q "E:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libraries\*.*" "E:\Desktop\MySpace\UIEditor\Debug.win32\"
@@ -292,4 +151,4 @@
 
 生成成功。
 
-已用时间 00:03:19.47
+已用时间 00:00:04.93

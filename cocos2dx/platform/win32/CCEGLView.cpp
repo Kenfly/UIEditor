@@ -163,7 +163,7 @@ static bool glew_dynamic_binding()
 //////////////////////////////////////////////////////////////////////////
 static CCEGLView* s_pMainWindow = NULL;
 static const WCHAR* kWindowClassName = L"Cocos2dxWin32";
-CCEGLView* CCEGLView::s_pEglView = NULL;
+
 static LRESULT CALLBACK _WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     if (s_pMainWindow && s_pMainWindow->getHWnd() == hWnd)
@@ -264,53 +264,60 @@ void CCEGLView::destroyGL()
     }
 }
 
-bool CCEGLView::Create()
+bool CCEGLView::Create(HWND hWnd /* = NULL */)
 {
     bool bRet = false;
     do
     {
         CC_BREAK_IF(m_hWnd);
 
-        HINSTANCE hInstance = GetModuleHandle( NULL );
-        WNDCLASS  wc;        // Windows Class Structure
+		if (hWnd != NULL)
+		{
+			m_hWnd = hWnd;
+		}
+		else
+		{
+			HINSTANCE hInstance = GetModuleHandle( NULL );
+			WNDCLASS  wc;        // Windows Class Structure
 
-        // Redraw On Size, And Own DC For Window.
-        wc.style          = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
-        wc.lpfnWndProc    = _WindowProc;                    // WndProc Handles Messages
-        wc.cbClsExtra     = 0;                              // No Extra Window Data
-        wc.cbWndExtra     = 0;                                // No Extra Window Data
-        wc.hInstance      = hInstance;                        // Set The Instance
-        wc.hIcon          = LoadIcon( NULL, IDI_WINLOGO );    // Load The Default Icon
-        wc.hCursor        = LoadCursor( NULL, IDC_ARROW );    // Load The Arrow Pointer
-        wc.hbrBackground  = NULL;                           // No Background Required For GL
-        wc.lpszMenuName   = m_menu;                         //
-        wc.lpszClassName  = kWindowClassName;               // Set The Class Name
+			// Redraw On Size, And Own DC For Window.
+			wc.style          = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
+			wc.lpfnWndProc    = _WindowProc;                    // WndProc Handles Messages
+			wc.cbClsExtra     = 0;                              // No Extra Window Data
+			wc.cbWndExtra     = 0;                                // No Extra Window Data
+			wc.hInstance      = hInstance;                        // Set The Instance
+			wc.hIcon          = LoadIcon( NULL, IDI_WINLOGO );    // Load The Default Icon
+			wc.hCursor        = LoadCursor( NULL, IDC_ARROW );    // Load The Arrow Pointer
+			wc.hbrBackground  = NULL;                           // No Background Required For GL
+			wc.lpszMenuName   = m_menu;                         //
+			wc.lpszClassName  = kWindowClassName;               // Set The Class Name
 
-        CC_BREAK_IF(! RegisterClass(&wc) && 1410 != GetLastError());
+			CC_BREAK_IF(! RegisterClass(&wc) && 1410 != GetLastError());
 
-        // center window position
-        RECT rcDesktop;
-        GetWindowRect(GetDesktopWindow(), &rcDesktop);
+			// center window position
+			RECT rcDesktop;
+			GetWindowRect(GetDesktopWindow(), &rcDesktop);
 
-        WCHAR wszBuf[50] = {0};
-        MultiByteToWideChar(CP_UTF8, 0, m_szViewName, -1, wszBuf, sizeof(wszBuf));
+			WCHAR wszBuf[50] = {0};
+			MultiByteToWideChar(CP_UTF8, 0, m_szViewName, -1, wszBuf, sizeof(wszBuf));
 
-        // create window
-        m_hWnd = CreateWindowEx(
-            WS_EX_APPWINDOW | WS_EX_WINDOWEDGE,    // Extended Style For The Window
-            kWindowClassName,                                    // Class Name
-            wszBuf,                                                // Window Title
-            WS_CAPTION | WS_POPUPWINDOW | WS_MINIMIZEBOX,        // Defined Window Style
-            0, 0,                                                // Window Position
-            //TODO: Initializing width with a large value to avoid getting a wrong client area by 'GetClientRect' function.
-            1000,                                               // Window Width
-            1000,                                               // Window Height
-            NULL,                                                // No Parent Window
-            NULL,                                                // No Menu
-            hInstance,                                            // Instance
-            NULL );
+			// create window
+			m_hWnd = CreateWindowEx(
+				WS_EX_APPWINDOW | WS_EX_WINDOWEDGE,    // Extended Style For The Window
+				kWindowClassName,                                    // Class Name
+				wszBuf,                                                // Window Title
+				WS_CAPTION | WS_POPUPWINDOW | WS_MINIMIZEBOX,        // Defined Window Style
+				0, 0,                                                // Window Position
+				//TODO: Initializing width with a large value to avoid getting a wrong client area by 'GetClientRect' function.
+				1000,                                               // Window Width
+				1000,                                               // Window Height
+				NULL,                                                // No Parent Window
+				NULL,                                                // No Menu
+				hInstance,                                            // Instance
+				NULL );
 
-        CC_BREAK_IF(! m_hWnd);
+			CC_BREAK_IF(! m_hWnd);
+		}
 
         bRet = initGL();
 		if(!bRet) destroyGL();
@@ -605,13 +612,10 @@ HWND CCEGLView::getHWnd()
     return m_hWnd;
 }
 
-void CCEGLView::setHWnd(HWND hWnd)
-{
-	m_hWnd = hWnd;
-}
-
 void CCEGLView::resize(int width, int height)
 {
+	//not need to resize in qt widget
+	return;
     if (! m_hWnd)
     {
         return;
@@ -674,26 +678,10 @@ void CCEGLView::setFrameSize(float width, float height)
     centerWindow();
 }
 
-void CCEGLView::setEditorFrameSize(float width, float height,HWND hWnd)
-{
-	m_hWnd=hWnd;
-
-	bool bRet = false;
-	do 
-	{	
-		resize(width, height);
-
-		bRet = initGL();
-		CC_BREAK_IF(!bRet);
-
-		s_pMainWindow = this;
-		bRet = true;
-	} while (0);
-
-	CCEGLViewProtocol::setFrameSize(width, height);
-}
 void CCEGLView::centerWindow()
 {
+	//not need to center in qt
+	return;
     if (! m_hWnd)
     {
         return;
@@ -716,9 +704,9 @@ void CCEGLView::centerWindow()
     }
     GetWindowRect(m_hWnd, &rcWindow);
 
-    int offsetX = rcDesktop.left + (rcDesktop.right - rcDesktop.left - (rcWindow.right - rcWindow.left)) / 2;
+    int offsetX = (rcDesktop.right - rcDesktop.left - (rcWindow.right - rcWindow.left)) / 2;
     offsetX = (offsetX > 0) ? offsetX : rcDesktop.left;
-    int offsetY = rcDesktop.top + (rcDesktop.bottom - rcDesktop.top - (rcWindow.bottom - rcWindow.top)) / 2;
+    int offsetY = (rcDesktop.bottom - rcDesktop.top - (rcWindow.bottom - rcWindow.top)) / 2;
     offsetY = (offsetY > 0) ? offsetY : rcDesktop.top;
 
     SetWindowPos(m_hWnd, 0, offsetX, offsetY, 0, 0, SWP_NOCOPYBITS | SWP_NOSIZE | SWP_NOOWNERZORDER | SWP_NOZORDER);
@@ -740,13 +728,14 @@ void CCEGLView::setScissorInPoints(float x , float y , float w , float h)
               (GLsizei)(h * m_fScaleY * m_fFrameZoomFactor));
 }
 
-CCEGLView* CCEGLView::sharedOpenGLView()
+CCEGLView* CCEGLView::sharedOpenGLView(HWND hWnd /* = NULL */)
 {
-  
-    if (s_pEglView == NULL)
+    static CCEGLView* s_pEglView = NULL;
+    if (s_pEglView == NULL || hWnd != NULL)
     {
+		CC_SAFE_DELETE(s_pEglView);
         s_pEglView = new CCEGLView();
-		if(!s_pEglView->Create())
+		if(!s_pEglView->Create(hWnd))
 		{
 			delete s_pEglView;
 			s_pEglView = NULL;

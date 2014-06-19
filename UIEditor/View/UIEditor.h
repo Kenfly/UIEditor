@@ -2,7 +2,8 @@
 #define UIEDITOR_H
 
 #include <QtWidgets/QMainWindow>
-#include "ui_uieditor.h"
+
+class Cocos2dxWidget;
 
 class UIEditor : public QMainWindow
 {
@@ -11,9 +12,12 @@ class UIEditor : public QMainWindow
 public:
 	UIEditor(QWidget *parent = 0);
 	~UIEditor();
-
+private slots:
+	void onBtnTestClick();
 private:
-	Ui::UIEditorClass ui;
+	void initToolBar();
+	void initDockWindow();
+	Cocos2dxWidget* m_pCxWidget;
 };
 
 #endif // UIEDITOR_H

@@ -258,9 +258,6 @@
     <ClCompile Include="..\platform\win32\CCCommon.cpp">
       <Filter>platform\win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\platform\win32\CCEGLView.cpp">
-      <Filter>platform\win32</Filter>
-    </ClCompile>
     <ClCompile Include="..\platform\win32\CCImage.cpp">
       <Filter>platform\win32</Filter>
     </ClCompile>
@@ -474,6 +471,9 @@
     <ClCompile Include="..\support\component\CCComponentContainer.cpp">
       <Filter>support\component</Filter>
     </ClCompile>
+    <ClCompile Include="..\platform\win32\CCEGLView.cpp">
+      <Filter>platform\win32</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\base_nodes\CCAtlasNode.h">
@@ -669,9 +669,6 @@
       <Filter>platform\win32</Filter>
     </ClInclude>
     <ClInclude Include="..\platform\win32\CCApplication.h">
-      <Filter>platform\win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\platform\win32\CCEGLView.h">
       <Filter>platform\win32</Filter>
     </ClInclude>
     <ClInclude Include="..\platform\win32\CCGL.h">
@@ -951,6 +948,9 @@
     </ClInclude>
     <ClInclude Include="..\support\component\CCComponentContainer.h">
       <Filter>support\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\platform\win32\CCEGLView.h">
+      <Filter>platform\win32</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
