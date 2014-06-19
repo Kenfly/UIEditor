@@ -1,10 +1,11 @@
-﻿生成启动时间为 2014/6/19 23:40:07。
+﻿生成启动时间为 2014/6/20 0:38:09。
      1>项目“E:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\cocos2d.vcxproj”在节点 2 上(Build 个目标)。
-     1>InitializeBuildStatus:
+     1>PrepareForBuild:
+         正在创建目录“E:\Desktop\MySpace\UIEditor\Debug.win32\”。
+       InitializeBuildStatus:
          正在创建“Debug.win32\libcocos2d.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\.. /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\win32 /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\iconv /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\zlib /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libpng /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libjpeg /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libtiff /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\libwebp /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\pthread /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\platform\third_party\win32\OGLES /I..\include /IE:\Desktop\MySpace\UIEditor\cocos2dx\proj.win32\..\kazmath\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COCOS2DXWIN32_EXPORTS /D GL_GLEXT_PROTOTYPES /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc110.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\platform\win32\CCEGLView.cpp
-         CCEGLView.cpp
+         所有输出均为最新。
          所有输出均为最新。
        PreLinkEvent:
          if not exist "E:\Desktop\MySpace\UIEditor\Debug.win32\" mkdir "E:\Desktop\MySpace\UIEditor\Debug.win32\"
@@ -151,4 +152,4 @@
 
 生成成功。
 
-已用时间 00:00:04.93
+已用时间 00:00:02.84
